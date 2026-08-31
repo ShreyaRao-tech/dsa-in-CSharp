@@ -1,0 +1,32 @@
+# Largest Element in an Array
+
+**Topic:** Arrays
+**Difficulty:** Easy
+
+## Problem
+Given an array of integers, find and return the largest element in the array.
+
+## https://www.geeksforgeeks.org/problems/largest-element-in-array4009/1
+```csharp
+public class Solution {
+    public int Largest(List<int> arr) {
+        int largest = arr[0];
+        for (int i = 1; i < arr.Count; i++)
+        {
+            if (arr[i] > largest)
+            {
+                largest = arr[i];
+            }
+        }
+        return largest;
+    }
+}
+```
+
+## Complexity
+- Time: O(n) — single pass through the array/list
+- Space: O(1) — no extra space used
+
+## Notes
+- Arrays use `.Length`, Lists use `.Count` — same logic, different property name
+- Careful with loop bounds: `i < length`, not `<=`, to avoid index out of range
